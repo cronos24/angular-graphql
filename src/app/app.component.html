@@ -1,0 +1,27 @@
+
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<div class="container-fluid">
+
+  <h1>Test de consumo Graphql</h1>
+
+
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1">
+      <a ngbNavLink routerLink="/user" routerLinkActive="active">Usuarios</a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2">
+      <a ngbNavLink routerLink="/post" routerLinkActive="active">Posts</a>
+      <ng-template ngbNavContent>
+        <router-outlet></router-outlet>
+      </ng-template>
+    </li>
+
+  </ul>
+  
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+  
+
+</div>

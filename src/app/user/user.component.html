@@ -1,0 +1,26 @@
+<button type="button" class="btn btn-outline-success btn-sm">Success</button>
+<br>
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">email</th>
+      <th scope="col">posts</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <ul>
+                    <li *ngFor="let post of user.posts">
+                        {{ post.title }}
+                    </li>
+                </ul> 
+             </td>
+        </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Contenido</th>
+      <th scope="col">Autor</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <td>{{ post.id }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.content }}</td>
+            <td>{{ post.author.name }}</td>
+        </tr>
+    </tbody>
+  </table>
